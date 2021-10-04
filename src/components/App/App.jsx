@@ -63,6 +63,7 @@ export default function App() {
           >
             <Login />
           </ClientProtectedRoute>
+          
 
           {/* Client Profile View */}
           <ClientProtectedRoute

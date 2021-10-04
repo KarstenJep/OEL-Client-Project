@@ -160,6 +160,21 @@ export default function Login() {
                     >
                         Login
                     </Button>
+
+                    {/* Guest Link */}
+                    <Button 
+                        style={{ marginTop: 20 }}
+                        size="large" 
+                        type="submit" 
+                        value="Log In" 
+                        variant="text" 
+                        color="default"
+                        onClick={() => {
+                            setEmail('Guest');
+                            setPassword('newpassword');
+                    }}>
+                        <u>Enter As Guest</u>
+                    </Button>
                 </form>
             </Grid>
         </Grid>
