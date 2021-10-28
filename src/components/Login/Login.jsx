@@ -53,10 +53,7 @@ export default function Login() {
     const errors = useSelector(store => store.errors);
     const user = useSelector(store => store.user);
     const dispatch = useDispatch();
-    alert(
-        "This app was designed to be invite only. There are guest login links added for your convenience!"
-        );  // display demo message
-
+    
     const login = (e) => {
         e.preventDefault();
         // Checks if email & password state is not null
@@ -102,18 +99,7 @@ export default function Login() {
                     gutterBottom
                     style={{ color: '#12ae5b' }}
                 >
-                    <span onClick={() => {
-                        setEmail('karsten@gmail.com');
-                        setPassword('1234567890');
-                    }}>Our</span>
-                    <span onClick={() => {
-                        setEmail('alex@initech.org');
-                        setPassword('testcoach');
-                    }}> Economic</span>
-                    <span onClick={() => {
-                        setEmail('sam@oureconomiclives.com');
-                        setPassword('programadmin');
-                    }}> Lives</span>
+                    <span>Our Economic Lives</span>
                 </Typography>
 
                 <form
@@ -167,12 +153,13 @@ export default function Login() {
 
                     {/* Guest User Link */}
                     <Button 
-                        style={{ marginTop: 20 }}
+                        style={{ marginTop: 10 }}
                         size="large" 
                         type="submit" 
                         value="Log In" 
                         variant="text" 
                         color="default"
+                        fullWidth
                         onClick={() => {
                             setEmail('Guest');
                             setPassword('newpassword');
@@ -182,12 +169,13 @@ export default function Login() {
 
                     {/* Guest Coach Link */}
                     <Button 
-                        style={{ marginTop: 20 }}
+                        style={{ marginTop: 10 }}
                         size="large" 
                         type="submit" 
                         value="Log In" 
                         variant="text" 
                         color="default"
+                        fullWidth
                         onClick={() => {
                             setEmail('testCoach');
                             setPassword('test2');
@@ -197,12 +185,13 @@ export default function Login() {
 
                     {/* Guest Admin Link */}
                     <Button 
-                        style={{ marginTop: 20 }}
+                        style={{ marginTop: 10 }}
                         size="large" 
                         type="submit" 
                         value="Log In" 
                         variant="text" 
                         color="default"
+                        fullWidth
                         onClick={() => {
                             setEmail('testAdmin');
                             setPassword('test1');
