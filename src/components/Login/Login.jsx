@@ -53,6 +53,9 @@ export default function Login() {
     const errors = useSelector(store => store.errors);
     const user = useSelector(store => store.user);
     const dispatch = useDispatch();
+    alert(
+        "This app was designed to be invite only. There are guest login links added for your convenience!"
+        );  // display demo message
 
     const login = (e) => {
         e.preventDefault();
@@ -74,6 +77,7 @@ export default function Login() {
     };
 
     return (
+        
         <Grid
             container
             component="main"
@@ -161,7 +165,7 @@ export default function Login() {
                         Login
                     </Button>
 
-                    {/* Guest Link */}
+                    {/* Guest User Link */}
                     <Button 
                         style={{ marginTop: 20 }}
                         size="large" 
@@ -173,7 +177,37 @@ export default function Login() {
                             setEmail('Guest');
                             setPassword('newpassword');
                     }}>
-                        <u>Enter As Guest</u>
+                        <u>Enter As Guest User</u>
+                    </Button>
+
+                    {/* Guest Coach Link */}
+                    <Button 
+                        style={{ marginTop: 20 }}
+                        size="large" 
+                        type="submit" 
+                        value="Log In" 
+                        variant="text" 
+                        color="default"
+                        onClick={() => {
+                            setEmail('testCoach');
+                            setPassword('test2');
+                    }}>
+                        <u>Enter As Guest Coach</u>
+                    </Button>
+
+                    {/* Guest Admin Link */}
+                    <Button 
+                        style={{ marginTop: 20 }}
+                        size="large" 
+                        type="submit" 
+                        value="Log In" 
+                        variant="text" 
+                        color="default"
+                        onClick={() => {
+                            setEmail('testAdmin');
+                            setPassword('test1');
+                    }}>
+                        <u>Enter As Guest Admin</u>
                     </Button>
                 </form>
             </Grid>
