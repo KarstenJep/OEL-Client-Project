@@ -51,8 +51,10 @@ export default function Pyramid(props) {
       justifyContent: "center",
       alignItems: "center",
       width: "100vw",
-      margin: 0,
+      marginRight: "6vh",
+      marginTop: "2vh",
       padding: 0,
+      cursor: "pointer",
     },
     row: {
       display: "flex",
@@ -68,6 +70,7 @@ export default function Pyramid(props) {
       justifyContent: "center",
       fontSize: 0,
       marginRight: pyramidTierMargin / 2,
+      hover: "boxShadow"
     },
     tier6Title: {
       zIndex: 1000,
